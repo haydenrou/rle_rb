@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'bundler/setup'
 require 'rle_rb'
 
 RSpec.configure do |config|
