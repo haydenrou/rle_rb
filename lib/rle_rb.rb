@@ -20,5 +20,22 @@ module RleRb
 
       result
     end
+
+    def decode(input)
+      return "" if input.empty?
+
+      count = ""
+      result = ""
+      input.each_char do |c|
+        if c.to_i.to_s == c
+          count += c
+        else
+          count.to_i.times { result += c }
+          count = ""
+        end
+      end
+
+      result
+    end
   end
 end
